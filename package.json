@@ -1,0 +1,16 @@
+{
+  "name": "your-app",
+  "version": "1.0.0",
+  "description": "your-description",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:frontend\" \"npm run dev:backend\"",
+    "dev:frontend": "cd frontend && npm run start",
+    "dev:backend": "cd backend && npm run start",
+    "format": "prettier --write ."
+  },
+  "dependencies": {
+    "concurrently": "^9.0.1",
+    "npm": "^10.7.0",
+    "prettier": "^3.3.2"
+  }
+}
