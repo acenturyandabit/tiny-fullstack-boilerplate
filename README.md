@@ -1,5 +1,9 @@
-```
-cd frontend && npm install
-cd backend && npm install
-npm install && npm run dev
+# Tiny fullstack boilerplate
+
+```bash
+# Develop
+npm run dev
+
+# Build docker
+npm run build
 ```

@@ -10,7 +10,7 @@ const db = getDb();
 // Middleware to parse JSON body content
 app.use(cors());
 app.use(express.json());
-
+app.use(express.static('static'));
 
 app.get('/api/hello', (req, res) => {
   res.send('Hello World!');

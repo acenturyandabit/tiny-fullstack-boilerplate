@@ -1,0 +1,22 @@
+version: "3"
+
+services:
+  tiny-fullstack-boilerplate:
+    image: localhost:5000/tiny-fullstack-boilerplate:latest
+    build:
+      context: .
+      dockerfile_inline: |
+        FROM node:23-slim
+
+        COPY backend /app/backend
+        RUN cd /app/backend && npm i
+
+        COPY frontend /app/frontend
+        RUN cd /app/frontend && npm i && npm run build
+
+        COPY <<-EOT /entrypoint.sh
+        \#!/bin/bash
+        cd /app/backend && npm start
+        EOT
+        RUN chmod +x /entrypoint.sh
+        ENTRYPOINT ["/entrypoint.sh"]
