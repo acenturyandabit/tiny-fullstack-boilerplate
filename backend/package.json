@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "tsx watch index.ts"
+    "start": "PORT=$NEW_PORT tsx watch index.ts"
   },
   "author": "",
   "license": "ISC",

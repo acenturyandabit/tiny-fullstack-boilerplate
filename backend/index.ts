@@ -3,7 +3,7 @@ import cors from 'cors';
 import { getDb } from './db';
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 80;
 
 const db = getDb();
 

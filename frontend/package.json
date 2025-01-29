@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "",
   "scripts": {
-    "start": "vite",
+    "start": "vite --port=$NEW_PORT",
     "build": "vite build",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit",
